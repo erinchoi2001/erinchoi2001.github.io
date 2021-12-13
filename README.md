@@ -1,2 +1,3 @@
 # erinchoi2001.github.io
-For hosting my websites
+Currently hosting my expanded resume and project portfolio website.
+

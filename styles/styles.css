@@ -1,0 +1,265 @@
+/* Styles for Expanded Resume Site */
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/*general*/
+
+#container {
+    width: 90%;
+    margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+body {
+	background-color: #f8f8ff;
+	font-family: 'Rubik', sans-serif;
+	font-weight: lighter;
+	color: black;
+}
+
+html { scroll-behavior: smooth; }
+
+
+/* header, titles */
+
+h1 {
+	font-size: 1.8em;
+	margin: 0;
+	padding-top: 0.5em;
+}
+
+h1#subtitle {
+	color: hotpink;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+	padding-top: 0.2em;
+}
+
+a.title:link, a.title:visited {
+	color: black;
+	text-shadow: 2px 2px 3px hotpink;
+	text-decoration: none;
+}
+
+a.title:hover, a.title:active {
+	color: hotpink;
+	text-shadow: 2px 2px 3px pink;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-top: 1em;
+	margin-bottom: 0;
+}
+
+h3 {
+	color: hotpink;
+	font-size: 1.2em;
+	margin-bottom: 0;
+}
+
+a.exp-link:link, a.exp-link:visited { color: hotpink }
+
+a.exp-link:hover, a.exp-link:active {
+	color: #f8f8ff;
+	background-color: hotpink;
+	text-decoration: none;
+}
+
+p.when {
+	color: #f077b9;
+	font-size: 1em;
+	font-weight: normal;
+	margin-top: 0.3em;
+}
+
+
+/* navigation */
+
+nav { border-bottom: 1px solid black; }
+
+ul.tabs {
+	list-style: none;
+	font-size: 1.25em;
+	margin: 0;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+ul.tabs > li { margin-bottom: 0.5em; }
+
+a#selected {
+	color: #f8f8ff;
+	padding: 0.2em;
+	background-color: hotpink;
+	text-decoration: none;
+}
+
+a.tab:link, a.tab:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a.tab:hover { color: hotpink; }
+
+a.tab:active { text-shadow: 2px 2px 3px pink; }
+
+a.subtab:link, a.subtab:visited {
+	color: black;
+	font-size: 0.9em;
+	padding-left: 5%;
+	text-decoration: none;
+}
+
+a.subtab:hover, a.subtab:active { color: hotpink; }
+
+
+/* text */
+
+.text-box {
+	padding-left: 3%;
+	padding-right: 3%;
+	background-color: pink;
+}
+
+ul { 
+	font-size: 0.9em;
+	margin: 0;
+	padding-left: 1.5em;
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+li { margin-bottom: 0.2em; }
+
+p.home { font-size: 1.1em; }
+
+ul.home { font-size: 1.1em; }
+
+ul.exp-list { font-size: 1em; }
+
+p.resume {
+	font-size: 1.1em;
+	color: hotpink;
+}
+
+a.tlink:link, a.proj-link:link, a.tlink:visited, a.proj-link:visited {
+	color: black;
+	text-decoration-color: hotpink;
+}
+
+a.tlink:hover, a.proj-link:hover { 
+	color: hotpink;
+	text-decoration: none;
+}
+
+a.tlink:active, a.proj-link:active {
+	color: #f8f8ff;
+	background-color: hotpink;
+}
+
+
+/* images and media */
+
+figure {
+	margin: 0;
+	min-width: 50%;
+}
+
+img, video {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	width: 100%;
+	height: auto;
+}
+
+a.figlink:hover, a.figlink:active { opacity: 70%; }
+
+img {
+	width: 100%;
+	height: auto;
+	border-radius: 10%;
+}
+
+img#me { border-radius: 50%; }
+
+
+/* footer */
+
+footer { border-top: 1px solid black; }
+
+a.contact-link:link, a.contact-link:visited { color: hotpink; }
+
+a.contact-link:visited { text-decoration: none; }
+
+a.contact-link:active {
+	color: #f8f8ff;
+	background-color: hotpink;
+}
+
+
+/* media queries */
+
+@media (min-width: 45em) {
+
+	/* layout - grid area assignment */
+	header {grid-area: a}
+	nav {grid-area: b}
+	main {grid-area: c}
+	footer {grid-area: d}
+
+	#container {
+	    display: grid;
+	    grid-template-columns: 1fr 3fr;
+	 	gap: 1em;
+	 	grid-template-areas: 
+			'a a a a'
+			'b c c c'
+			'. c c c'
+			'd d d d';
+	}
+
+	nav {
+		border-bottom: 0;
+		border-right: 1px solid black;
+		position: sticky;
+		padding-top: 3%;
+		top: 0;
+	}
+
+	ul.tabs {
+		margin-top: 0.2em;
+		padding-right: 1em;
+	}
+
+	h2 { margin-top: 0; }
+
+	article { padding-left: 0.5em; }
+
+	footer { font-size: 1.1em; }
+}
+
+@media (min-width: 55em) {
+
+	main {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	figure { margin-left: 5%; }
+
+	img {
+		position: sticky;
+		top: 0;
+	}
+}
+

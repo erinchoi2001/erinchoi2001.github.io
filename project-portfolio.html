@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Erin Choi | Project Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles/styles.css">
+	</head>
+
+	<body>
+		<div id="container">
+
+			<header>
+				<h1 id="title"><a class="title" href="index.html">erin choi</a></h1>
+				<h1 id="subtitle"></h1>
+			</header>
+
+			<nav>
+				<ul class="tabs">
+					<li><a class="tab" href="index.html">home</a></li>
+					<li><a class="tab" href="work-experience.html">work experience</a></li>
+					<li><a class="tab" href="leadership.html">leadership experience</a></li>
+					<li><a class="tab" id="selected" href="project-portfolio.html">project portfolio</a></li>
+						<li><a class="subtab" href="#web-design">web design</a></li>
+						<li><a class="subtab" href="#rds">ads fairness evaluation</a></li>
+						<li><a class="subtab" href="#ids">analysis of nyc education data</a></li>
+						<li><a class="subtab" href="#ds4e">analysis of spotify data</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<article>
+					<h2 class="subtitle">project portfolio</h2>
+
+					<h3 class="experience" id="web-design">web design projects and sites</h3>
+					<p class="when">introduction to web design, fall 2021</p>
+
+					<div class="text-box">
+						<p>I coded and/or created multiple projects and websites from scratch, showcasing different skills and concepts learned over the course of the semester, including HTML/CSS, graphic editing and creation, and JavaScript.</p>
+						<p>All projects can be viewed <a class="proj-link" href="https://i6.cims.nyu.edu/~eyc321/">here</a>.</p>
+					</div>
+
+					<h3 class="experience" id="rds">nutritional label for an automated decision system predicting loan default risk</h3>
+					<p class="when">responsible data science, spring 2021</p>
+
+					<video controls src="media/rds-video.mp4" type="video/mp4" width="853" height="480" muted>
+					<p>Your browser does not support web video.</p>
+					</video>
+
+					<div class="text-box">
+						<p>My partner and I selected an analyzed an automated decision system, evaluating it for its accuracy and fairness, then developed a conclusion about whether it is publicly deployable in its current state. In Google Colab, we added to the original ADS code to evaluate the system, using packages like IBM's AI Fairness 360 toolkit and LIME. We wrote a report based on the results of this code and created a presentation video, which is viewable above.</p>
+						<p>Our code and report can be downloaded <a class="proj-link" href="my-files/s21-rds.zip">here</a>.</p>
+					</div>
+
+					<h3 class="experience" id="ids">analysis of nyc middle schools and specialized high school admission</h3>
+					<p class="when">introduction to data science, fall 2020</p>
+
+					<div class="text-box">
+						<p>For the course final project, I analyzed and visualized data from the NYC Department of Education on NYC middle schools, in relation to applications and acceptances to one of 8 highly selective public high schools. I determined what factors are most important in sending students to such high schools and achieving high scores on objective measures of achievement.</p>
+						<p>My report and code can be viewed <a class="proj-link" href="my-files/f20-ids.pdf">here</a>.</p>
+					</div>
+
+					<h3 class="experience" id="ds4e">analysis of spotify data: the relationship between songs' valence and danceability</h3>
+					<p class="when">data science for everyone, spring 2020</p>
+
+					<div class="text-box">
+						<p>My final project consisted of a step-by-step analysis of a dataset I sourced from Kaggle. I hypothesized, analyzed, and visualized relationships between different variables, performed regression analysis, and identified potential biases in the data and my work.</p>
+						<p>A PDF copy of my Jupyter Notebook report can be viewed <a class="proj-link" href="my-files/s20-ds4e.pdf">here</a>.</p>
+					</div>
+
+				</article>
+			</main>
+
+			<footer>
+				<p id="contact">
+					to contact or connect with me:<br>
+
+					email <a class=contact-link href="mailto:eyc321@nyu.edu">eyc321@nyu.edu</a><br>
+					
+					find me on <a class="contact-link" href="https://www.linkedin.com/in/erinchoi2001/">linkedin</a><br>
+
+					view my work on <a class="contact-link" href="https://github.com/erinchoi2001">github</a>
+				</p>
+
+				<p id="today"></p>
+			</footer>
+
+		</div>
+
+		<script src="js/resume-js.js"></script>
+	</body>
+</html>
